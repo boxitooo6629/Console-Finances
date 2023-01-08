@@ -86,16 +86,59 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+// this variable(let) target all the months displayed in the arrays
+let months = finances.length
 
-let count = 0 
 
-let janArray = []
-        // 1
-for (let index=0; index < finances.lenght; index++) {
-    const element = array [index]
-    count++
+let total = 0;
+
+let greatestIncs = finances[0];
+
+let greatestDecs = finances[0];
+
+//   1 statement    2 statement (true)   3 statement
+for( let chislo=0; chislo < finances.length; chislo++) {
+ 
+     let totalCurrentMonth = finances[chislo][1]
+     total = total + totalCurrentMonth 
+     
+     if ( totalCurrentMonth > greatestIncs[1]) {
+       greatestIncs = finances[chislo];
+     }
+     
+     if (totalCurrentMonth < greatestDecs[1]) {
+        greatestDecs = finances[chislo];
+     }
 }
+let avarage = total / months;
 
-console.log()
 
-if (elemental [0].toLowerCase[.])
+console.log("Total Months: " + months)
+console.log("Total: $" + total)
+console.log("Avarage Change: $" + avarage.toFixed(2) )
+console.log("Greatest increase in Profits: " + greatestIncs[0] + " " + greatestIncs[1])
+console.log("Greatest Decrease in Profits: " + greatestDecs[0] + " " + greatestDecs[1])
+
+
+
+
+
+
+
+ //array var for getting into exact date/number
+//let fifthElement = finances[5]
+//let fifthElementTotal = fifthElement[1]
+//console.log(finances[10][0])
+
+
+
+
+
+
+
+
+
+
+
+
+
