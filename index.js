@@ -89,7 +89,6 @@ var finances = [
 // this variable(let) target all the months displayed in the arrays
 let months = finances.length
 
-
 let total = 0;
 
 let greatestIncs = finances[0];
